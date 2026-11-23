@@ -181,3 +181,17 @@ footer img{width:220px;margin:0 auto 18px}
   .lb .lb-p{left:8px}.lb .lb-n{right:8px}
   .page-head{padding:150px 0 70px}
 }
+
+/* faq */
+.faq-wrap{max-width:860px;margin:0 auto}
+.faq-group{margin-top:60px}
+.faq-group:first-child{margin-top:0}
+.faq-group h2{font-size:clamp(28px,3.6vw,38px);margin-bottom:18px}
+.faq-group details{border-bottom:1px solid rgba(217,184,120,.22)}
+.faq-group summary{list-style:none;cursor:pointer;padding:24px 50px 24px 0;position:relative;font-family:var(--serif);font-size:23px;color:#fff;transition:color .2s}
+.faq-group summary::-webkit-details-marker{display:none}
+.faq-group summary::after{content:"+";position:absolute;right:6px;top:50%;transform:translateY(-50%);color:var(--gold);font-family:var(--sans);font-size:26px;font-weight:300;transition:transform .3s}
+.faq-group details[open] summary{color:var(--gold-soft)}
+.faq-group details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
+.faq-group summary:hover{color:var(--gold)}
+.faq-group details p{color:var(--muted);padding:0 40px 26px 0;font-size:16px}

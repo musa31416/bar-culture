@@ -15,3 +15,8 @@ Visitors see their nearest service city first (IP lookup via get.geojs.io, fallb
 - Buy a domain (e.g. barculture-something.com) and point it at GitHub Pages or move to Netlify.
 - Confirm copy, stats (30 yrs / 10 yrs), event list and service areas with Ronnie.
 - Add Instagram / Facebook links and reviews if he has them.
+
+## Draft notes for Ronnie's review
+- FAQ answers are educated guesses. Items marked `<!-- CONFIRM: ... -->` in faq.html need his real policy (pricing, alcohol, insurance, travel, deposit, staffing ratio, attire, arrival time).
+- Page copy is written in a casual first-draft voice; swap in his own stories and phrasing once he reviews.
+- Source copy lives in build.py (in the chat workspace); edit the HTML files directly if that is easier.
