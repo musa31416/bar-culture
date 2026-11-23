@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bar Culture | Mobile Bar &amp; Event Staffing in Austin, Dallas, Houston, San Antonio &amp; Destin</title>
+<meta name="description" content="Bar Culture provides TABC certified bartenders, servers and mobile bar service for weddings, private parties, corporate events, festivals and concerts across Texas and Destin, Florida.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Jost:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --midnight:#0e0d12; --charcoal:#1a1820; --slate:#26232c;
+  --plum:#3a2234; --wine:#5c2338;
+  --gold:#d9b878; --gold-soft:#e8d3a6; --platinum:#e6e4e8; --muted:#a9a4ad;
+  --serif:"Cormorant Garamond",Georgia,serif; --sans:"Jost",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--midnight);color:var(--platinum);font-family:var(--sans);font-weight:300;line-height:1.7;font-size:17px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+.wrap{max-width:1180px;margin:0 auto;padding:0 24px}
+.eyebrow{font-size:12px;letter-spacing:.32em;text-transform:uppercase;color:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:500;line-height:1.15;color:#fff}
+h2{font-size:clamp(34px,5vw,52px);margin:10px 0 18px}
+.rule{width:64px;height:1px;background:var(--gold);margin:22px 0}
+.btn{display:inline-block;padding:15px 34px;font-size:13px;letter-spacing:.22em;text-transform:uppercase;border:1px solid var(--gold);transition:.25s}
+.btn-gold{background:var(--gold);color:var(--midnight);font-weight:500}
+.btn-gold:hover{background:var(--gold-soft)}
+.btn-line{color:var(--gold)}
+.btn-line:hover{background:rgba(217,184,120,.1)}
+
+/* nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:50;transition:.3s}
+nav.solid{background:rgba(14,13,18,.94);backdrop-filter:blur(8px);border-bottom:1px solid rgba(217,184,120,.15)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:78px}
+.brand{font-family:var(--serif);font-size:26px;letter-spacing:.2em;color:var(--gold)}
+.links{display:flex;gap:34px;align-items:center;font-size:13px;letter-spacing:.18em;text-transform:uppercase}
+.links a:not(.btn):hover{color:var(--gold)}
+.links .btn{padding:10px 22px}
+.burger{display:none;background:none;border:0;color:var(--gold);font-size:28px;cursor:pointer}
+
+/* hero */
+.hero{min-height:100vh;display:flex;align-items:center;text-align:center;position:relative;
+  background:linear-gradient(180deg,rgba(14,13,18,.78),rgba(14,13,18,.6) 45%,rgba(14,13,18,.95)),url(img/hero.jpg) center/cover}
+.hero .wrap{position:relative;padding-top:90px;padding-bottom:60px}
+.hero-logo{width:min(560px,86vw);margin:0 auto 26px}
+.hero .tag{font-family:var(--serif);font-style:italic;font-size:clamp(22px,3vw,30px);color:var(--gold-soft)}
+.hero p.sub{max-width:620px;margin:18px auto 36px;color:var(--platinum)}
+.hero .ctas{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+.cities{margin-top:56px;display:flex;gap:28px;justify-content:center;flex-wrap:wrap;font-family:var(--serif);font-size:20px;color:var(--muted)}
+.cities span::before{content:"\2022";color:var(--gold);margin-right:28px}
+.cities span:first-child::before{display:none}
+
+section{padding:110px 0}
+.alt{background:var(--charcoal)}
+
+/* intro */
+.intro{display:grid;grid-template-columns:1.05fr 1fr;gap:70px;align-items:center}
+.intro-img{position:relative}
+.intro-img img{aspect-ratio:4/5;object-fit:cover;width:100%}
+.intro-img::after{content:"";position:absolute;inset:18px -18px -18px 18px;border:1px solid var(--gold);z-index:-1}
+.stats{display:flex;gap:46px;margin-top:34px}
+.stat b{display:block;font-family:var(--serif);font-size:48px;font-weight:500;color:var(--gold);line-height:1}
+.stat small{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted)}
+
+/* services */
+.center{text-align:center}
+.center .rule{margin:22px auto}
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:28px;margin-top:56px}
+.card{background:var(--slate);overflow:hidden;transition:.3s;border:1px solid transparent}
+.card:hover{border-color:rgba(217,184,120,.4);transform:translateY(-4px)}
+.card img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.card .body{padding:28px 28px 32px}
+.card h3{font-size:28px;margin-bottom:10px}
+.card p{color:var(--muted);font-size:16px}
+
+/* events */
+.events{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(217,184,120,.2);margin-top:56px;border:1px solid rgba(217,184,120,.2)}
+.ev{background:var(--midnight);padding:38px 30px}
+.ev h3{font-size:26px;color:var(--gold-soft);margin-bottom:8px}
+.ev p{color:var(--muted);font-size:15px}
+
+/* quote band */
+.band{padding:120px 0;text-align:center;background:linear-gradient(rgba(58,34,52,.82),rgba(14,13,18,.9)),url(img/gala.jpg) center/cover}
+.band blockquote{font-family:var(--serif);font-style:italic;font-size:clamp(28px,4vw,44px);max-width:860px;margin:0 auto;color:#fff;line-height:1.3}
+.band cite{display:block;margin-top:22px;font-style:normal;font-size:12px;letter-spacing:.3em;text-transform:uppercase;color:var(--gold)}
+
+/* why */
+.why{display:grid;grid-template-columns:repeat(4,1fr);gap:34px;margin-top:56px}
+.why h3{font-size:24px;margin:14px 0 8px}
+.why p{color:var(--muted);font-size:15px}
+.why .num{font-family:var(--serif);color:var(--gold);font-size:18px;letter-spacing:.2em}
+
+/* gallery */
+.gallery{columns:3 280px;column-gap:14px;margin-top:56px}
+.gallery img{width:100%;margin-bottom:14px;cursor:zoom-in;transition:.3s;filter:saturate(.95)}
+.gallery img:hover{opacity:.85}
+.lb{position:fixed;inset:0;background:rgba(0,0,0,.92);display:none;align-items:center;justify-content:center;z-index:99;padding:30px;cursor:zoom-out}
+.lb.on{display:flex}
+.lb img{max-height:92vh;max-width:94vw}
+
+/* areas */
+.areas{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:50px}
+.area{border:1px solid rgba(217,184,120,.3);padding:32px 18px;text-align:center}
+.area h3{font-size:26px;color:var(--gold-soft)}
+.area p{font-size:13px;color:var(--muted);letter-spacing:.08em;margin-top:6px}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.25fr;gap:70px}
+.cinfo a{display:block;font-family:var(--serif);font-size:30px;color:#fff;margin:6px 0 22px}
+.cinfo a:hover{color:var(--gold)}
+form{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+form .full{grid-column:1/-1}
+label{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);display:block;margin-bottom:6px}
+input,select,textarea{width:100%;background:var(--slate);border:1px solid #3a3640;color:#fff;padding:14px 16px;font:inherit;font-size:16px}
+input:focus,select:focus,textarea:focus{outline:none;border-color:var(--gold)}
+textarea{min-height:130px;resize:vertical}
+form .btn{border:none;cursor:pointer;justify-self:start}
+
+footer{border-top:1px solid rgba(217,184,120,.15);padding:50px 0 40px;text-align:center;color:var(--muted);font-size:14px}
+footer img{width:220px;margin:0 auto 18px}
+
+.fade{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s}
+.fade.in{opacity:1;transform:none}
+
+@media (max-width:900px){
+  .links{display:none;position:absolute;top:78px;left:0;right:0;flex-direction:column;background:var(--midnight);padding:26px;gap:22px;border-bottom:1px solid rgba(217,184,120,.2)}
+  .links.open{display:flex}
+  .burger{display:block}
+  .intro,.contact{grid-template-columns:1fr;gap:50px}
+  .grid3,.events{grid-template-columns:1fr}
+  .why{grid-template-columns:1fr 1fr}
+  .areas{grid-template-columns:1fr 1fr}
+  form{grid-template-columns:1fr}
+  section{padding:80px 0}
+  .cities span::before{display:none}
+  .cities{gap:14px}
+}
+</style>
+</head>
+<body>
+
+<nav id="nav">
+  <div class="wrap nav-in">
+    <a href="#top" class="brand">BAR CULTURE</a>
+    <button class="burger" id="burger" aria-label="Menu">&#9776;</button>
+    <div class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#events">Events</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#areas">Areas</a>
+      <a href="#contact" class="btn btn-gold">Get a Quote</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero" id="top">
+  <div class="wrap">
+    <img src="img/logo-gold.png" alt="Bar Culture" class="hero-logo">
+    <div class="eyebrow">Bartending &amp; Event Staffing</div>
+    <div class="rule" style="margin:22px auto"></div>
+    <div class="tag">A higher standard for every occasion</div>
+    <p class="sub">TABC certified bartenders, servers and a full mobile bar, personally vetted and ready for your wedding, party, festival or corporate event.</p>
+    <div class="ctas">
+      <a href="#contact" class="btn btn-gold">Request a Quote</a>
+      <a href="tel:+15128445233" class="btn btn-line">Call 512.844.5233</a>
+    </div>
+    <div class="cities"><span>Austin</span><span>Dallas</span><span>Houston</span><span>San Antonio</span><span>Destin</span></div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="wrap intro">
+    <div class="intro-img fade"><img src="img/cart.jpg" alt="Bar Culture mobile bar cart"></div>
+    <div class="fade">
+      <div class="eyebrow">About Bar Culture</div>
+      <h2>Good drinks. Better company.</h2>
+      <div class="rule"></div>
+      <p>Bar Culture is a mobile bar and event staffing company built on three decades in professional hospitality. We bring TABC certified bartenders and servers to your event, and every one of them is personally vetted by us.</p>
+      <p style="margin-top:16px">From white glove martinis to cowboy hats and cold beer, we match the feel of your event and take care of your guests so you can enjoy it with them.</p>
+      <div class="stats">
+        <div class="stat"><b>30</b><small>Years in hospitality</small></div>
+        <div class="stat"><b>10</b><small>Years in event bartending</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="services" class="alt">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">What We Do</div>
+      <h2>Our Services</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="grid3">
+      <div class="card fade"><img src="img/outdoor-bar.jpg" alt="Mobile bar setup"><div class="body"><h3>Mobile Bar Service</h3><p>A complete bar brought to your venue or backyard, set up, stocked to your plan and cleaned up when the night is done.</p></div></div>
+      <div class="card fade"><img src="img/bartender.jpg" alt="Bar Culture bartender"><div class="body"><h3>Certified Bartenders</h3><p>TABC certified, professionally dressed bartenders who pour well, move fast and treat your guests like their own.</p></div></div>
+      <div class="card fade"><img src="img/team.jpg" alt="Bar Culture event staff"><div class="body"><h3>Servers &amp; Event Staff</h3><p>Personally vetted servers and support staff for dinners, receptions and large events of any size.</p></div></div>
+      <div class="card fade"><img src="img/punch.jpg" alt="Signature cocktail"><div class="body"><h3>Signature Cocktails</h3><p>A custom drink menu built around your event, your colors and your favorite flavors.</p></div></div>
+      <div class="card fade"><img src="img/wine-station.jpg" alt="Wine and champagne station"><div class="body"><h3>Wine &amp; Champagne Stations</h3><p>Elegant pour stations for toasts, cocktail hours and corporate receptions.</p></div></div>
+      <div class="card fade"><img src="img/branded-bar.jpg" alt="Branded bar setup"><div class="body"><h3>Corporate &amp; Venue Partners</h3><p>Reliable staffing for venues, country clubs, races and concerts who need a team they can count on every time.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="events">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Every Occasion</div>
+      <h2>Events We Serve</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="events fade">
+      <div class="ev"><h3>Weddings</h3><p>Ceremony to last call, with a bar team that keeps the celebration flowing.</p></div>
+      <div class="ev"><h3>Private Parties</h3><p>Birthdays, anniversaries, graduations and backyard gatherings.</p></div>
+      <div class="ev"><h3>Bar &amp; Bat Mitzvahs</h3><p>Polished service for family milestones and the guests who come to celebrate.</p></div>
+      <div class="ev"><h3>Corporate Events</h3><p>Holiday parties, launches, client dinners and office celebrations.</p></div>
+      <div class="ev"><h3>Festivals &amp; Concerts</h3><p>High volume bars staffed by people who can handle a crowd.</p></div>
+      <div class="ev"><h3>Races &amp; Sporting Events</h3><p>Hospitality tents, VIP areas and finish line celebrations.</p></div>
+    </div>
+  </div>
+</section>
+
+<div class="band">
+  <div class="wrap fade">
+    <blockquote>"From white glove martinis to cowboy hats and beer, every event gets our best."</blockquote>
+    <cite>The Bar Culture Promise</cite>
+  </div>
+</div>
+
+<section class="alt">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Why Bar Culture</div>
+      <h2>Hospitality You Can Trust</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="why">
+      <div class="fade"><div class="num">01</div><h3>TABC Certified</h3><p>Every bartender is licensed and trained to serve responsibly.</p></div>
+      <div class="fade"><div class="num">02</div><h3>Personally Vetted</h3><p>We know every person we send to your event.</p></div>
+      <div class="fade"><div class="num">03</div><h3>Top of the Line</h3><p>Professional attire, clean setups and a calm, polished presence.</p></div>
+      <div class="fade"><div class="num">04</div><h3>30 Years of Experience</h3><p>Seasoned hospitality behind every pour and every plan.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Our Work</div>
+      <h2>Gallery</h2>
+      <div class="rule"></div>
+    </div>
+    <div class="gallery">
+      <img src="img/tablescape.jpg" alt="Wedding tablescape">
+      <img src="img/welcome.jpg" alt="Welcome bar">
+      <img src="img/celebrate.jpg" alt="Shrimp cocktails and Celebrate sign">
+      <img src="img/wedding.jpg" alt="Wedding reception">
+      <img src="img/party.jpg" alt="Guests dancing">
+      <img src="img/ceremony.jpg" alt="Outdoor wedding ceremony">
+      <img src="img/outdoor-bar2.jpg" alt="Backyard mobile bar">
+      <img src="img/tables.jpg" alt="Reception tables">
+      <img src="img/buffet.jpg" alt="Gold chafing dishes">
+      <img src="img/gala.jpg" alt="Gala event">
+    </div>
+  </div>
+</section>
+
+<section id="areas" class="alt">
+  <div class="wrap">
+    <div class="center fade">
+      <div class="eyebrow">Where We Work</div>
+      <h2>Service Areas</h2>
+      <div class="rule"></div>
+      <p style="color:var(--muted);max-width:620px;margin:0 auto">Based in Austin and serving a 100 mile radius, plus Texas's biggest cities and the Florida Gulf Coast.</p>
+    </div>
+    <div class="areas fade">
+      <div class="area"><h3>Austin</h3><p>HOME BASE + 100 MI</p></div>
+      <div class="area"><h3>San Antonio</h3><p>TEXAS</p></div>
+      <div class="area"><h3>Dallas</h3><p>TEXAS</p></div>
+      <div class="area"><h3>Houston</h3><p>TEXAS</p></div>
+      <div class="area"><h3>Destin</h3><p>FLORIDA</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="wrap contact">
+    <div class="cinfo fade">
+      <div class="eyebrow">Let's Plan Your Event</div>
+      <h2>Request a Quote</h2>
+      <div class="rule"></div>
+      <p style="color:var(--muted);margin-bottom:30px">Tell us about your event and we'll get back to you with a plan and pricing.</p>
+      <label>Call or Text</label><a href="tel:+15128445233">512.844.5233</a>
+      <label>Email</label><a href="mailto:barculturenow@gmail.com">barculturenow@gmail.com</a>
+    </div>
+    <form id="quote" class="fade">
+      <div><label>Name</label><input name="name" required></div>
+      <div><label>Phone</label><input name="phone" type="tel"></div>
+      <div><label>Email</label><input name="email" type="email" required></div>
+      <div><label>Event Date</label><input name="date" type="date"></div>
+      <div><label>Event Type</label><select name="type"><option>Wedding</option><option>Private Party</option><option>Bar / Bat Mitzvah</option><option>Corporate Event</option><option>Festival / Concert</option><option>Race / Sporting Event</option><option>Other</option></select></div>
+      <div><label>Guest Count</label><input name="guests" type="number" min="1"></div>
+      <div class="full"><label>City / Venue</label><input name="venue"></div>
+      <div class="full"><label>Tell us about your event</label><textarea name="msg"></textarea></div>
+      <button class="btn btn-gold" type="submit">Send Request</button>
+    </form>
+  </div>
+</section>
+
+<footer>
+  <img src="img/logo-gold.png" alt="Bar Culture">
+  <p>Bartending &amp; Event Staffing &nbsp;|&nbsp; Austin &middot; Dallas &middot; Houston &middot; San Antonio &middot; Destin</p>
+  <p style="margin-top:8px"><a href="tel:+15128445233">512.844.5233</a> &nbsp;|&nbsp; <a href="mailto:barculturenow@gmail.com">barculturenow@gmail.com</a></p>
+  <p style="margin-top:18px;font-size:12px">&copy; <span id="yr"></span> Bar Culture. All rights reserved.</p>
+</footer>
+
+<div class="lb" id="lb"><img alt=""></div>
+
+<script>
+const nav=document.getElementById('nav');
+addEventListener('scroll',()=>nav.classList.toggle('solid',scrollY>40));
+document.getElementById('burger').onclick=()=>document.getElementById('links').classList.toggle('open');
+document.querySelectorAll('#links a').forEach(a=>a.onclick=()=>document.getElementById('links').classList.remove('open'));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.fade').forEach(el=>io.observe(el));
+const lb=document.getElementById('lb');
+document.querySelectorAll('.gallery img').forEach(i=>i.onclick=()=>{lb.querySelector('img').src=i.src;lb.classList.add('on')});
+lb.onclick=()=>lb.classList.remove('on');
+document.getElementById('yr').textContent=new Date().getFullYear();
+// Demo form: opens the visitor's email app with the details filled in.
+document.getElementById('quote').onsubmit=e=>{
+  e.preventDefault();const f=new FormData(e.target);
+  const body=[...f.entries()].map(([k,v])=>k+': '+v).join('\n');
+  location.href='mailto:barculturenow@gmail.com?subject='+encodeURIComponent('Quote request: '+f.get('type'))+'&body='+encodeURIComponent(body);
+};
+</script>
+</body>
+</html>
