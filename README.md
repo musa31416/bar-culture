@@ -1,6 +1,8 @@
 # Bar Culture demo site
 
-Static one-page site (index.html + img/). No build step.
+Static multi-page site: index, about, services, gallery, contact. Shared styles in css/style.css; nav, footer, gallery and location logic in js/site.js. No build step.
+
+Visitors see their nearest service city first (IP lookup via get.geojs.io, fallback ipapi.co). If they are more than 400 miles from every city, or the lookup fails, the default Texas-first order shows.
 
 ## Put it on GitHub Pages
 1. Create a new public repo on GitHub, e.g. `bar-culture`.
