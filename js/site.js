@@ -4,7 +4,7 @@ const PAGE = document.body.dataset.page || 'home';
 const PHONE = '512.844.5233', TEL = '+15128445233', EMAIL = 'barculturenow@gmail.com';
 
 /* ---------- nav + footer ---------- */
-const pages=[['index.html','Home','home'],['about.html','About','about'],['services.html','Services','services'],['gallery.html','Gallery','gallery'],['faq.html','FAQ','faq']];
+const pages=[['index.html','Home','home'],['about.html','About','about'],['services.html','Services','services'],['gallery.html','Gallery','gallery'],['services.html#pricing','Pricing','pricing'],['faq.html','FAQ','faq']];
 document.body.insertAdjacentHTML('afterbegin',`
 <nav id="nav"><div class="wrap nav-in">
   <a href="index.html" class="brand">BAR CULTURE</a>
@@ -115,9 +115,4 @@ document.querySelectorAll('[data-grid]').forEach(g=>{
   g.querySelectorAll('div').forEach(el=>el.onclick=()=>openLB(+el.dataset.i));
 });
 
-/* ---------- quote form (demo: opens email app) ---------- */
-const q=document.getElementById('quote');
-if(q) q.onsubmit=e=>{e.preventDefault();const f=new FormData(q);
-  const body=[...f.entries()].map(([k,v])=>k+': '+v).join('\n');
-  location.href='mailto:'+EMAIL+'?subject='+encodeURIComponent('Quote request: '+f.get('type'))+'&body='+encodeURIComponent(body);};
 })();

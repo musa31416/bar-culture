@@ -11,12 +11,12 @@ Visitors see their nearest service city first (IP lookup via get.geojs.io, fallb
 4. After a minute the site is live at `https://<your-username>.github.io/bar-culture/`.
 
 ## Before going live for real
-- Quote form currently opens the visitor's email app. Swap it for Formspree or similar so requests land in barculturenow@gmail.com directly.
+- Quote form posts to FormSubmit (formsubmit.co) and emails barculturenow@gmail.com. The FIRST submission triggers an activation email to that inbox; Ronnie must click the link once, then all requests arrive as emails. To change the address, edit the form action in contact.html.
 - Buy a domain (e.g. barculture-something.com) and point it at GitHub Pages or move to Netlify.
 - Confirm copy, stats (30 yrs / 10 yrs), event list and service areas with Ronnie.
 - Add Instagram / Facebook links and reviews if he has them.
 
 ## Draft notes for Ronnie's review
-- FAQ answers are educated guesses. Items marked `<!-- CONFIRM: ... -->` in faq.html need his real policy (pricing, alcohol, insurance, travel, deposit, staffing ratio, attire, arrival time).
+- FAQ answers are educated guesses. Items marked `<!-- CONFIRM: ... -->` in faq.html need his real policy (deposit, insurance, attire, arrival time, booking lead time, Destin certification. Pricing, alcohol, minimum hours, travel and staffing ratio are now Ronnie's real answers).
 - Page copy is written in a casual first-draft voice; swap in his own stories and phrasing once he reviews.
 - Source copy lives in build.py (in the chat workspace); edit the HTML files directly if that is easier.

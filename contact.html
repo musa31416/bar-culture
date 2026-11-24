@@ -20,20 +20,26 @@
       <div class="eyebrow">Get in Touch</div>
       <h2>Rather talk it through?</h2>
       <div class="rule"></div>
-      <p style="color:var(--muted);margin-bottom:28px">Call or text anytime. We’re happy to help you figure out what you need, even if you’re still early in planning.</p><label>Call or Text</label><a href="tel:+15128445233">512.844.5233</a>
+      <p style="color:var(--muted);margin-bottom:28px">We love giving quotes over the phone so we can get to know your event. Call or text anytime, even if you’re still early in planning.</p><label>Call or Text</label><a href="tel:+15128445233">512.844.5233</a>
       <label>Email</label><a href="mailto:barculturenow@gmail.com">barculturenow@gmail.com</a>
       <div class="near" data-near style="margin-top:0"></div>
     </div>
-    <form id="quote" class="fade">
-      <div><label>Name</label><input name="name" required></div>
-      <div><label>Phone</label><input name="phone" type="tel"></div>
+    <form id="quote" class="fade" action="https://formsubmit.co/barculturenow@gmail.com" method="POST">
+      <input type="hidden" name="_subject" value="New quote request from the Bar Culture website">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_next" value="https://musa31416.github.io/bar-culture/thanks.html">
+      <input type="text" name="_honey" style="display:none" tabindex="-1" autocomplete="off">
+      <div><label>Name</label><input name="Name" required></div>
+      <div><label>Phone</label><input name="Phone" type="tel" required></div>
       <div><label>Email</label><input name="email" type="email" required></div>
-      <div><label>Event Date</label><input name="date" type="date"></div>
-      <div><label>Event Type</label><select name="type"><option>Wedding</option><option>Private Party</option><option>Bar / Bat Mitzvah</option><option>Corporate Event</option><option>Festival / Concert</option><option>Race / Sporting Event</option><option>Other</option></select></div>
-      <div><label>Guest Count</label><input name="guests" type="number" min="1"></div>
-      <div class="full"><label>City / Venue</label><input name="venue"></div>
-      <div class="full"><label>Tell us about your event</label><textarea name="msg"></textarea></div>
+      <div><label>Event Date</label><input name="Event date" type="date"></div>
+      <div><label>Occasion</label><select name="Occasion"><option>Wedding</option><option>Private Party</option><option>Birthday</option><option>Bar / Bat Mitzvah</option><option>Corporate Event</option><option>Festival / Concert</option><option>Race / Sporting Event</option><option>Other</option></select></div>
+      <div><label>Number of Guests</label><input name="Guests" type="number" min="1"></div>
+      <div class="full"><label>Location (City / Venue)</label><input name="Location"></div>
+      <div class="full"><label>Anything else we should know?</label><textarea name="Details" placeholder="Craft cocktails? Start time? Indoor or outdoor?"></textarea></div>
       <button class="btn btn-gold" type="submit">Send Request</button>
+      <p class="full" style="font-size:13px;color:var(--muted)">We will look it over and get back to you. Prefer to talk? Call or text 512.844.5233.</p>
     </form>
   </div>
 </section>

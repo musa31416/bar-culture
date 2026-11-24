@@ -195,3 +195,19 @@ footer img{width:220px;margin:0 auto 18px}
 .faq-group details[open] summary::after{transform:translateY(-50%) rotate(45deg)}
 .faq-group summary:hover{color:var(--gold)}
 .faq-group details p{color:var(--muted);padding:0 40px 26px 0;font-size:16px}
+
+/* pricing */
+.price-card{max-width:680px;margin:56px auto 0;border:1px solid var(--gold);padding:54px 50px;text-align:center;background:var(--midnight);position:relative}
+.price-card::before{content:"";position:absolute;inset:8px;border:1px solid rgba(217,184,120,.2);pointer-events:none}
+.price{font-family:var(--serif);font-size:76px;color:var(--gold);line-height:1;margin:18px 0 14px}
+.price small{display:block;font-family:var(--sans);font-size:12px;letter-spacing:.28em;text-transform:uppercase;color:var(--muted);margin-bottom:8px}
+.price-card .lead{color:var(--platinum);max-width:480px;margin:0 auto}
+.price-card ul{list-style:none;margin:28px auto;max-width:420px;text-align:left}
+.price-card li{padding:10px 0 10px 28px;border-bottom:1px solid rgba(217,184,120,.15);position:relative;font-size:16px}
+.price-card li::before{content:"\2713";position:absolute;left:0;color:var(--gold)}
+.price-card .fine{font-size:13px;color:var(--muted);max-width:500px;margin:0 auto 30px}
+.price-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.teaser{text-align:center;margin-top:44px;color:var(--platinum);font-family:var(--serif);font-size:22px}
+.teaser b{color:var(--gold);font-weight:500}
+@media (max-width:900px){.price-card{padding:44px 24px}.price{font-size:60px}}
+@media (max-width:1180px) and (min-width:901px){.links{gap:20px;font-size:12px;letter-spacing:.12em}.brand{font-size:22px}}
