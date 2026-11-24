@@ -211,3 +211,4 @@ footer img{width:220px;margin:0 auto 18px}
 .teaser b{color:var(--gold);font-weight:500}
 @media (max-width:900px){.price-card{padding:44px 24px}.price{font-size:60px}}
 @media (max-width:1180px) and (min-width:901px){.links{gap:20px;font-size:12px;letter-spacing:.12em}.brand{font-size:22px}}
+section[id]{scroll-margin-top:70px}
