@@ -58,6 +58,9 @@ function applyLocation(lat,lon){
       if(isNaN(g[0]))continue;try{sessionStorage.setItem('bc_geo',JSON.stringify(g))}catch(e){}
       return applyLocation(g[0],g[1]);}catch(e){}
   }
+/* quote form: send visitors back to this site's own thank-you page, whatever the domain */
+const nx=document.querySelector('input[name="_next"]');
+if(nx&&location.protocol.startsWith('http')) nx.value=location.origin+location.pathname.replace(/[^/]*$/,'')+'thanks.html';
 })();
 
 /* ---------- gallery images ---------- */
@@ -115,4 +118,7 @@ document.querySelectorAll('[data-grid]').forEach(g=>{
   g.querySelectorAll('div').forEach(el=>el.onclick=()=>openLB(+el.dataset.i));
 });
 
+/* quote form: send visitors back to this site's own thank-you page, whatever the domain */
+const nx=document.querySelector('input[name="_next"]');
+if(nx&&location.protocol.startsWith('http')) nx.value=location.origin+location.pathname.replace(/[^/]*$/,'')+'thanks.html';
 })();
